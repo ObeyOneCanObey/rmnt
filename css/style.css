@@ -1,7 +1,7 @@
 :root {
   --light-color: white;
   --dark-color: #111111;
-  --hyperlink: blue;
+  --hyperlink: #4fc3f7;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
 }
 
 .page {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .fancy-text {
@@ -76,4 +76,13 @@ body {
   padding: 7px;
   font-size: 16px;
   font-weight: 600;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .valign-wrapper {
+    display: block;
+  }
+  .first {
+    display: flex;
+  }
 }
