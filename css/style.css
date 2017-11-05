@@ -1,0 +1,38 @@
+:root {
+  --light-color: #111111;
+  --dark-color: white;
+  --hyperlink: blue;
+}
+
+body {
+  background-color: var(--dark-color);
+  font-family: 'Ubuntu Mono', monospace;
+  color: var(--light-color);
+}
+
+.page {
+  height: 100vh;
+}
+
+.fancy-text {
+  background: var(--light-color);
+  color: var(--dark-color);
+  font-size: 20px;
+}
+
+.name {
+  padding: 1vh 1vw;
+  font-size: 50px;
+  cursor: none;
+}
+
+.main-link {
+  display: inline-block;
+  padding: 2vh 0.5vw;
+}
+
+.main-link:hover {
+  color: var(--hyperlink);
+  text-decoration: underline;
+  cursor: pointer;
+}
