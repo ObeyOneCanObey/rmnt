@@ -12,6 +12,7 @@ body {
 
 .page {
   min-height: 100vh;
+  padding: 5vh 0;
 }
 
 .fancy-text {
@@ -34,7 +35,7 @@ body {
 
 .main-link {
   display: inline-block;
-  padding: 2vh 0.5vw;
+  padding: 2vh 0.5vw 0vw 0.5vh;
 }
 
 .main-link:hover {
@@ -76,6 +77,21 @@ body {
   padding: 7px;
   font-size: 16px;
   font-weight: 600;
+}
+
+.link-item {
+  display: inline-block;
+  padding: 0 0.5vw;
+}
+
+.link-item:hover {
+  color: var(--hyperlink);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 2vh 7vw 1vh 2vw;
 }
 
 @media only screen and (max-device-width: 480px) {
