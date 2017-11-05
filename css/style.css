@@ -1,6 +1,6 @@
 :root {
-  --light-color: #111111;
-  --dark-color: white;
+  --light-color: white;
+  --dark-color: #111111;
   --hyperlink: blue;
 }
 
@@ -17,12 +17,18 @@ body {
 .fancy-text {
   background: var(--light-color);
   color: var(--dark-color);
-  font-size: 20px;
+  padding: 0 2px;
 }
 
 .name {
   padding: 1vh 1vw;
   font-size: 50px;
+  cursor: none;
+}
+
+.heading {
+  padding: 1vh 1vw;
+  font-size: 25px;
   cursor: none;
 }
 
@@ -35,4 +41,8 @@ body {
   color: var(--hyperlink);
   text-decoration: underline;
   cursor: pointer;
+}
+
+.text-box {
+  padding: 3vh 2vw;
 }
