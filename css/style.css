@@ -31,7 +31,7 @@ span {
 }
 
 .specialText:hover {
-  text-decoration: line-through;
+  text-decoration: none;
 }
 
 .homePageContainer {
@@ -40,12 +40,12 @@ span {
 }
 
 .nameHeading {
-  font-size: 3vh;
+  font-size: 3.2vh;
   font-weight: 700;
 }
 .nameSubheading {
   font-style: italic;
-  font-size: 1.5vh;
+  font-size: 1.6vh;
 }
 
 .headingGrid {
@@ -68,4 +68,12 @@ span {
 
 .headingGridContent {
   width: 80%;
+}
+
+.workGridTitle {
+  display: inline-block;
+}
+
+.workGridContent {
+  display: inline-block;
 }
