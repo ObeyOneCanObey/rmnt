@@ -3,19 +3,19 @@
   --dark-color: #111111;
   --hyperlink: #4fc3f7;
 
-  --lightBackground: #fafafa;
+  --lightBackground: #111111;
 
+  --darkColor: white;
   --darkText: blue;
+  --font: 'white';
 }
 
 body {
   background-color: var(--lightBackground);
   font-family: 'Cutive Mono', monospace;
+  color: var(--font);
 }
-
-span {
-  cursor: default;
-}
+ 
 
 .page {
   height: 100vh;
@@ -23,6 +23,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .specialText {
@@ -37,10 +38,14 @@ span {
 .homePageContainer {
   height: 50vh;
   width: 50vw;
+  opacity: 1;
+  animation-name: appear;
+  animation-duration: 1s;
+
 }
 
 .nameHeading {
-  font-size: 3.2vh;
+  font-size: 2vh;
   font-weight: 700;
 }
 .nameSubheading {
@@ -76,4 +81,64 @@ span {
 
 .workGridContent {
   display: inline-block;
+}
+
+.infoText {
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.animationDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.animationLineVertical {
+  margin-left: 2vw;
+  height: 98vh;
+  border-color: var(--darkColor);
+  border-right-style: solid;
+  border-width: 4px;
+  display: inline-block;
+  z-index: 5;
+  animation-name: example;
+  animation-duration: 1s;
+  -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(var(--darkColor)), to(rgba(0, 0, 0, 0))) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(var(--darkColor), rgba(0, 0, 0, 0)) 1 100%;
+  -moz-border-image: -moz-linear-gradient(var(--darkColor), rgba(0, 0, 0, 0)) 1 100%;    
+  -o-border-image: -o-linear-gradient(var(--darkColor), rgba(0, 0, 0, 0)) 1 100%;
+  border-image: linear-gradient(to bottom, var(--darkColor), rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.animationLineHorizontal {
+  margin-top: 2vw;
+  padding-top: 4px;
+  width: 98vw;
+  border-color: var(--darkColor);
+  display: inline-block;
+  z-index: 5;
+  animation-name: exampleHori;
+  animation-duration: 1s;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(var(--darkColor)), to(transparent));
+  background-image: -webkit-linear-gradient(left,var(--darkColor), transparent);
+  background-image: -moz-linear-gradient(left, blue, transparent);
+  background-image: -o-linear-gradient(left, blue, transparent);
+}
+
+@keyframes example {
+  from {height: 0;}
+  to {height: 98vh;}
+}
+
+
+@keyframes exampleHori {
+  from {width: 0;}
+  to {width: 98vw;}
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
