@@ -3,9 +3,9 @@
   --dark-color: #111111;
   --hyperlink: #4fc3f7;
 
-  --lightBackground: #111111;
+  --lightBackground: WHITE;
 
-  --darkColor: white;
+  --darkColor: BLUE;
   --darkText: blue;
   --font: 'white';
 }
@@ -15,7 +15,6 @@ body {
   font-family: 'Cutive Mono', monospace;
   color: var(--font);
 }
- 
 
 .page {
   height: 100vh;
@@ -23,7 +22,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
 
 .specialText {
@@ -36,8 +34,8 @@ body {
 }
 
 .homePageContainer {
-  height: 50vh;
-  width: 50vw;
+  height: 55vh;
+  width: 36vw;
   opacity: 1;
   animation-name: appear;
   animation-duration: 1s;
@@ -73,6 +71,7 @@ body {
 
 .headingGridContent {
   width: 80%;
+  padding-left: 2%;
 }
 
 .workGridTitle {
