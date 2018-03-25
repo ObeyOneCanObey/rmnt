@@ -39,7 +39,6 @@ body {
   opacity: 1;
   animation-name: appear;
   animation-duration: 1s;
-
 }
 
 .nameHeading {
@@ -141,4 +140,45 @@ body {
 @keyframes appear {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+
+.navigatorContainer {
+  height: 55vh;
+  width: 60vw;
+  opacity: 1;
+  animation-name: appear;
+  animation-duration: 1s;
+  display: flex;
+  flex-direction: row;
+}
+
+.navigatorSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.navigatorContent {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  padding-top: 10%;
+}
+
+.subOfProject {
+  font-style: italic;
+  font-size: 1.6vh;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+.navigateTo {
+  font-style: italic;
+  font-size: 1.6vh;
+}
+
+.goTo {
+  float: right;
 }
