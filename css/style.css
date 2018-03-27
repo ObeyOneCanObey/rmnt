@@ -192,7 +192,7 @@ li {
 }
 
 .workExp {
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 .navigatorData {
@@ -207,4 +207,22 @@ li {
 .workContent {
   display: none;
   transition: 0.5s;
+}
+
+.sideProj {
+  transition: 0.1s;
+}
+
+.projContent {
+  display: none;
+  transition: 0.5s;
+}
+
+.navigatorProjData {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 100%;
+  padding: 4vh 3vw;
+  transition: 0.2s;  
 }

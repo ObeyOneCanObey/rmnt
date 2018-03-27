@@ -46,6 +46,28 @@ function openWork(input) {
 
 }
 
+function openProj(input) {
+    var elements = document.getElementsByClassName("sideProj");
+    var content = document.getElementsByClassName("projContent");
+
+    var contentContainer = document.getElementsByClassName("navigatorProjData")[0];
+    // set opacity to 0
+    contentContainer.style.opacity = 0;
+
+    setTimeout(function() {
+        for(var i =0; i < elements.length; i++) {
+            elements[i].style.color = "#111111";
+            content[i].style.display = 'none';
+        }
+        elements[input].style.color = "blue";
+        content[input].style.display = "flex";
+        
+        contentContainer.style.opacity = 1;        
+    }, 210);
+
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
     openWork(0);
+    openProj(0);
 });
