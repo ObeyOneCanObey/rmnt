@@ -144,8 +144,8 @@ body {
 
 
 .navigatorContainer {
-  height: 55vh;
-  width: 60vw;
+  height:100vh;
+  width: 100vw;
   opacity: 1;
   animation-name: appear;
   animation-duration: 1s;
@@ -157,14 +157,14 @@ body {
   flex: 1;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .navigatorContent {
-  flex: 1;
   display: flex;
-  width: 100%;
-  padding-top: 10%;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 5vw;
 }
 
 .subOfProject {
@@ -181,4 +181,30 @@ body {
 
 .goTo {
   float: right;
+}
+
+li {
+  cursor: pointer;
+}
+
+.navigatorData {
+  flex: 1;
+}
+
+.workExp {
+  transition: 0.5s;
+}
+
+.navigatorData {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 100%;
+  padding: 4vh 3vw;
+  transition: 0.2s;
+}
+
+.workContent {
+  display: none;
+  transition: 0.5s;
 }

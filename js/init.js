@@ -24,3 +24,28 @@ function goToNavigator() {
 function goTo(input) {
     $(".main").moveTo(input);       
 }
+
+function openWork(input) {
+    var elements = document.getElementsByClassName("workExp");
+    var content = document.getElementsByClassName("workContent");
+
+    var contentContainer = document.getElementsByClassName("navigatorData")[0];
+    // set opacity to 0
+    contentContainer.style.opacity = 0;
+
+    setTimeout(function() {
+        for(var i =0; i < elements.length; i++) {
+            elements[i].style.color = "#111111";
+            content[i].style.display = 'none';
+        }
+        elements[input].style.color = "blue";
+        content[input].style.display = "flex";
+        
+        contentContainer.style.opacity = 1;        
+    }, 210);
+
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    openWork(0);
+});
