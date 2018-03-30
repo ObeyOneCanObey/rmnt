@@ -226,3 +226,23 @@ li {
   padding: 4vh 3vw;
   transition: 0.2s;  
 }
+
+.projContent {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.workContent {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.workLogo {
+  height: 10vh;
+}
