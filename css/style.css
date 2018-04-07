@@ -1,13 +1,21 @@
 :root {
   --light-color: #d4e157;
   --dark-color: #111111;
-  --hyperlink: #4fc3f7;
+  --hyperlink: blue;
 
   --lightBackground: WHITE;
 
-  --darkColor: #4fc3f7;
-  --darkText: #4fc3f7;
+  --darkColor: blue;
+  --darkText: blue;
   --font: 'white';
+}
+
+a {
+  color: var(--darkColor);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 body {
@@ -244,5 +252,49 @@ li {
 }
 
 .workLogo {
-  height: 10vh;
+  height: 30vh;
+  padding-left: 2vw;
+  padding-right: 3vw;
+  opacity: 0.7;
+}
+
+.workDescription {
+  padding-left: 3vw;
+  padding-right: 3vw;
+  width: 55%;
+}
+
+.techUsed {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-around;
+  padding-bottom: 10vh;
+}
+
+.techName {
+  border-width: 1px;
+  color: var(--darkText);
+  border-color: var(--darkColor);
+  border-style: solid;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20vh;
+  opacity: 0.7;
+}
+
+.specialItem {
+  color: var(--darkText);
+}
+
+.workItem {
+  padding-bottom: 1vh;
+}
+
+.workData {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 44%;
 }
