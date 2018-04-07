@@ -2,128 +2,247 @@
   --light-color: #d4e157;
   --dark-color: #111111;
   --hyperlink: #4fc3f7;
+
+  --lightBackground: WHITE;
+
+  --darkColor: #4fc3f7;
+  --darkText: #4fc3f7;
+  --font: 'white';
 }
 
 body {
-  background-color: var(--dark-color);
-  font-family: 'Ubuntu Mono', monospace;
-  color: var(--light-color);
+  background-color: var(--lightBackground);
+  font-family: 'Cutive Mono', monospace;
+  color: var(--font);
 }
 
 .page {
-  min-height: 100vh;
-  padding: 0 0 10vh 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.fancy-text {
-  background: var(--light-color);
-  color: var(--dark-color);
-  padding: 0 2px;
+.specialText {
+  font-style: italic;
+  color: var(--darkText);
 }
 
-.name {
-  padding: 1vh 1vw;
-  font-size: 50px;
-  cursor: none;
-  position: relative;
+.specialText:hover {
+  text-decoration: none;
 }
 
-.heading {
-  padding: 1vh 1vw;
-  font-size: 25px;
-  cursor: none;
+.homePageContainer {
+  height: 55vh;
+  width: 36vw;
+  opacity: 1;
+  animation-name: appear;
+  animation-duration: 1s;
 }
 
-.main-link {
+.nameHeading {
+  font-size: 2vh;
+  font-weight: 700;
+}
+.nameSubheading {
+  font-style: italic;
+  font-size: 1.6vh;
+}
+
+.headingGrid {
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  height: 100%;
+}
+
+.headingGridRow {
+  width: 100%;
+  display: flex;
+  padding-bottom: 3vh;
+}
+
+.headingGridTitle {
+  width: 20%;
+  font-weight: 700;
+  opacity: 0.4;
+}
+
+.headingGridContent {
+  width: 80%;
+  padding-left: 2%;
+}
+
+.workGridTitle {
   display: inline-block;
-  padding: 2vh 0.5vw 0vw 0.5vh;
 }
 
-.main-link:hover {
-  color: var(--hyperlink);
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.text-box {
-  padding: 3vh 2vw;
-}
-
-.company-field {
-  padding: 0.5vh 3vw;
-}
-
-.company {
-  padding: 1vh 1vw;
-  font-size: 23px;
-}
-
-.detail {
-  padding: 0 1vw;
-  font-size: 17px;
-}
-
-.company:hover {
-  color: var(--hyperlink);
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.tech-item {
+.workGridContent {
   display: inline-block;
-  padding: 1vh 2vw;;
 }
 
-.tech-text {
-  padding: 7px;
-  font-size: 16px;
-  font-weight: 600;
+.infoText {
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
-.link-item {
-  display: inline-block;
-  padding: 0 0.5vw;
-}
-
-.link-item:hover {
-  color: var(--hyperlink);
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.footer {
-  padding: 2vh 7vw 1vh 2vw;
-  background: var(--light-color);
-  color: var(--dark-color);
-  margin: 0;
-}
-
-@media only screen and (max-device-width: 480px) {
-  .valign-wrapper {
-    display: block;
-  }
-  .first {
-    display: flex;
-  }
-}
-
-.line {
-  background: white;
-  transition: 0.2s;
-  transform: rotate(60deg);
-  margin: 0 auto;
-}
-
-.line-display {
-  border-radius: 50px;
-  width: 30vh;
-  height: 3px;
-  margin: 30px;
-}
-
-#lineContainer {
-  position: relative;
-  text-align:center;
-  top: 10vh;
+.animationDiv {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   z-index: -1;
+  opacity: 0.5;
+}
+
+.animationLineVertical {
+  margin-left: 2vw;
+  height: 98vh;
+  border-color: var(--darkColor);
+  border-right-style: dashed;
+  border-width: 2px;
+  display: inline-block;
+  z-index: 5;
+  animation-name: example;
+  animation-duration: 1s;
+  -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(var(--darkColor)), to(rgba(0, 0, 0, 0))) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(var(--darkColor), rgba(0, 0, 0, 0)) 1 100%;
+  -moz-border-image: -moz-linear-gradient(var(--darkColor), rgba(0, 0, 0, 0)) 1 100%;    
+  -o-border-image: -o-linear-gradient(var(--darkColor), rgba(0, 0, 0, 0)) 1 100%;
+  border-image: linear-gradient(to bottom, var(--darkColor), rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.animationLineHorizontal {
+  margin-top: 2vw;
+  padding-top: 4px;
+  width: 98vw;
+  border-color: var(--darkColor);
+  display: inline-block;
+  z-index: 5;
+  animation-name: exampleHori;
+  animation-duration: 1s;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(var(--darkColor)), to(transparent));
+  background-image: -webkit-linear-gradient(left,var(--darkColor), transparent);
+  background-image: -moz-linear-gradient(left, blue, transparent);
+  background-image: -o-linear-gradient(left, blue, transparent);
+}
+
+@keyframes example {
+  from {height: 0;}
+  to {height: 98vh;}
+}
+
+
+@keyframes exampleHori {
+  from {width: 0;}
+  to {width: 98vw;}
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+.navigatorContainer {
+  height:100vh;
+  width: 100vw;
+  opacity: 1;
+  animation-name: appear;
+  animation-duration: 1s;
+  display: flex;
+  flex-direction: row;
+}
+
+.navigatorSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navigatorContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 5vw;
+}
+
+.subOfProject {
+  font-style: italic;
+  font-size: 1.6vh;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+.navigateTo {
+  font-style: italic;
+  font-size: 1.6vh;
+}
+
+.goTo {
+  float: right;
+}
+
+li {
+  cursor: pointer;
+}
+
+.navigatorData {
+  flex: 1;
+}
+
+.workExp {
+  transition: 0.1s;
+}
+
+.navigatorData {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 100%;
+  padding: 4vh 3vw;
+  transition: 0.2s;
+}
+
+.workContent {
+  display: none;
+  transition: 0.5s;
+}
+
+.sideProj {
+  transition: 0.1s;
+}
+
+.projContent {
+  display: none;
+  transition: 0.5s;
+}
+
+.navigatorProjData {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 100%;
+  padding: 4vh 3vw;
+  transition: 0.2s;  
+}
+
+.projContent {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.workContent {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.workLogo {
+  height: 10vh;
 }
