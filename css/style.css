@@ -1,13 +1,21 @@
 :root {
   --light-color: #d4e157;
   --dark-color: #111111;
-  --hyperlink: #4fc3f7;
+  --hyperlink: blue;
 
   --lightBackground: WHITE;
 
-  --darkColor: #4fc3f7;
-  --darkText: #4fc3f7;
+  --darkColor: blue;
+  --darkText: blue;
   --font: 'white';
+}
+
+a {
+  color: var(--darkColor);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 body {
